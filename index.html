@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Preview</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="preview-container">
+      <button id="start-camera">Open Camera</button>
+      <h1>Camera Preview</h1>
+      <div class="camera-wrapper">
+        <video id="video" autoplay></video>
+        <div class="camera-controls">
+          <div class="capture-image camera-button capture-image">
+            <span></span>
+          </div>
+          <div class="capture-image camera-button record-video">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

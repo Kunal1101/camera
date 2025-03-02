@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.preview-container {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding: 10px;
+  gap: 16px;
+}
+
+#start-camera {
+  padding: 8px 16px;
+  background-color: #2c2c2e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#video {
+  width: 640px;
+  height: 480px;
+  border-radius: 10px;
+}
+
+.camera-wrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.camera-controls .camera-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.camera-controls .camera-button span {
+  height: 20px;
+  width: 20px;
+  display: block;
+  border-radius: 50%;
+}
+
+.camera-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.camera-controls .capture-image {
+  border: 2px solid #fff;
+}
+
+.camera-controls .capture-image span {
+  background-color: #fff;
+}
+
+.camera-controls .record-video {
+  border: 2px solid #ff0000;
+}
+
+.camera-controls .record-video span {
+  background-color: #ff0000;
+}
