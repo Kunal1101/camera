@@ -21,8 +21,7 @@ function startCamera() {
 function captureImage() {
   const video = document.getElementById("video");
   const canvas = document.getElementById("canvas");
-  const img = document.createElement("img");
-  img.setAttribute("id", "captured-image");
+  const img = document.getElementById("captured-image");
   const wrapper = document.querySelector(".camera-wrapper");
   wrapper.appendChild(img);
 
@@ -37,8 +36,29 @@ function captureImage() {
   img.src = canvas.toDataURL("image/png");
 }
 
+// Open Camera
 const openCamera = document.getElementById("start-camera");
-openCamera.addEventListener("click", startCamera);
+openCamera.addEventListener("click", () => {
+  startCamera();
 
+  document.querySelector(".camera-controls").classList.remove("hidden");
+});
+
+//  Capture image
 const imageCapture = document.querySelector(".capture-image");
-imageCapture.addEventListener("click", captureImage);
+imageCapture.addEventListener("click", () => {
+  captureImage();
+  document.querySelector(".camera-controls").classList.add("hidden");
+  document.querySelector("#reset-camera").classList.remove("hidden");
+});
+
+// Reset state
+const resetBtn = document.getElementById("reset-camera");
+resetBtn.addEventListener("click", () => {
+  const capturedImageSrc = document.getElementById("captured-image");
+  if (capturedImageSrc && capturedImageSrc.src !== "") {
+    capturedImageSrc.src = "";
+    resetBtn.classList.add("hidden");
+    document.querySelector(".camera-controls").classList.remove("hidden");
+  }
+});
