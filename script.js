@@ -62,3 +62,17 @@ resetBtn.addEventListener("click", () => {
     document.querySelector(".camera-controls").classList.remove("hidden");
   }
 });
+
+// Start Recording button
+const startRecording = document.querySelector(".record-video");
+startRecording.addEventListener("click", () => {
+  startRecording.classList.add("recording-started");
+  document.getElementById("stop-recording").classList.remove("hidden");
+});
+
+// Stop Recording
+const stopRecording = document.getElementById("stop-recording");
+stopRecording.addEventListener("click", () => {
+  startRecording.classList.remove("recording-started");
+  stopRecording.classList.add("hidden");
+});
