@@ -9,6 +9,10 @@ body {
   color: #fff;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .preview-container {
   display: grid;
   place-content: center;
@@ -17,14 +21,21 @@ body {
   gap: 16px;
 }
 
-#start-camera {
+.header-btn {
   padding: 8px 16px;
   background-color: #2c2c2e;
   color: #fff;
   border: none;
   border-radius: 6px;
-  font-size: 20px;
   cursor: pointer;
+}
+
+#start-camera {
+  font-size: 20px;
+}
+
+#reset-camera {
+  font-size: 14px;
 }
 
 #video {
