@@ -98,3 +98,11 @@ body {
 .camera-controls .record-video span {
   background-color: #ff0000;
 }
+
+.download-image {
+  background-color: #413bbc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
