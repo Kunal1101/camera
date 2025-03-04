@@ -64,15 +64,15 @@ resetBtn.addEventListener("click", () => {
 });
 
 // Start Recording button
-const recrodigBtn = document.querySelector(".record-video");
-recrodigBtn.addEventListener("click", () => {
-  recrodigBtn.classList.add("recording-started");
+const startRecording = document.querySelector(".record-video");
+startRecording.addEventListener("click", () => {
+  startRecording.classList.add("recording-started");
   document.getElementById("stop-recording").classList.remove("hidden");
 });
 
 // Stop Recording
 const stopRecording = document.getElementById("stop-recording");
 stopRecording.addEventListener("click", () => {
-  recrodigBtn.classList.remove("recording-started");
+  startRecording.classList.remove("recording-started");
   stopRecording.classList.add("hidden");
 });
