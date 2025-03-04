@@ -34,7 +34,20 @@ function captureImage() {
 
   // Convert canvas to image and display it
   img.src = canvas.toDataURL("image/png");
+  downloadImage(img.src);
 }
+
+// Download image
+const downloadImage = (src) => {
+  const downloadBtn = document.querySelector(".download-image");
+  downloadBtn.classList.remove("hidden");
+  downloadBtn.addEventListener("click", function () {
+    const link = document.createElement("a");
+    link.href = src;
+    link.download = "captured-image.png";
+    link.click();
+  });
+};
 
 // Open Camera
 const openCamera = document.getElementById("start-camera");
@@ -60,6 +73,7 @@ resetBtn.addEventListener("click", () => {
     capturedImageSrc.src = "";
     resetBtn.classList.add("hidden");
     document.querySelector(".camera-controls").classList.remove("hidden");
+    document.querySelector(".download-image").classList.add("hidden");
   }
 });
 
